@@ -1,5 +1,9 @@
 package clase;
 
-public class Giraffe {
+public class Giraffe extends Animal{
 
+	public Giraffe(String name) {
+		super(name);
+	}
+	
 }
