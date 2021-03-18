@@ -35,9 +35,10 @@ public class BrokerTranzactieLazy {
 		return builder.toString();
 	}
 	
-	public static BrokerTranzactieLazy getInstance(String nume, int vechime, int nrTranzactiiEfectuate) {
-		if(broker==null)
+	public static synchronized BrokerTranzactieLazy getInstance(String nume, int vechime, int nrTranzactiiEfectuate) {
+		if(broker==null) {
 			broker=new BrokerTranzactieLazy(nume, vechime, nrTranzactiiEfectuate);
+		}
 		return broker;
 	}
 	
