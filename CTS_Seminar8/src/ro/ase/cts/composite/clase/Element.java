@@ -11,7 +11,7 @@ public class Element implements ComponentaMeniu{
 	
 	@Override
 	public void adaugaNod(ComponentaMeniu componentaMeniu) {
-		throw new IllegalArgumentException("Nu ste implementata");
+		throw new IllegalArgumentException("Nu ste implementata"); 
 		
 	}
 

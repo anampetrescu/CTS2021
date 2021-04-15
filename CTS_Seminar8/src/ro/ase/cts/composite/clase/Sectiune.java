@@ -10,7 +10,7 @@ public class Sectiune implements ComponentaMeniu{
 	public Sectiune( String numeSectiune) {
 		super();
 		this.listaComponente = new ArrayList<ComponentaMeniu>();
-		this.numeSectiune = numeSectiune;
+		this.numeSectiune = numeSectiune; 
 	}
 
 	@Override

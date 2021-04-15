@@ -6,5 +6,5 @@ public interface ComponentaMeniu {
 	public void stergeNod(ComponentaMeniu componentaMeniu);
 	ComponentaMeniu getNod(int index);
 	public void printeaza();
-	
+	 
 }

@@ -6,7 +6,7 @@ import ro.ase.cts.composite.clase.Sectiune;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		ComponentaMeniu meniu=new Sectiune("Meniu");
 		ComponentaMeniu sectiuneBauturi=new Sectiune("bauturi");
 		ComponentaMeniu sectiuneDesert=new Sectiune("desert");
