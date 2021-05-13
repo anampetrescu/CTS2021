@@ -13,9 +13,6 @@ public class Bilet implements AbstractPrototype{
 		this.echipa2 = echipa2;
 		this.data = data;
 	}
-	
-
-
 
 	public void setCodBilet(int codBilet) {
 		this.codBilet = codBilet;
