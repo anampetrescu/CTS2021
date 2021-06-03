@@ -4,7 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categorii.TesteGetPromovabilitateCategory;
+import ro.ase.cts.categorii.TesteNormaleCategory;
+import ro.ase.cts.categorii.TesteUrgenteCategory;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
@@ -17,6 +21,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteNormaleCategory.class)
 	public void testConstructorLimitaInferioara() {
 		Grupa grupa=new Grupa(1000);
 		assertEquals(1000, grupa.getNrGrupa());
@@ -29,6 +34,7 @@ public class TestGrupa {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
+	@Category(TesteUrgenteCategory.class)
 	public void testConstructorAruncaExceptieLimitaInf() {
 		Grupa grupa=new Grupa(986);
 	}
@@ -50,6 +56,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category({TesteGetPromovabilitateCategory.class, TesteNormaleCategory.class})
 	public void testPromovabilitateRight() {
 		Grupa grupa=new Grupa(1083);
 		for( int i=0;i<3;i++) {
@@ -67,6 +74,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteGetPromovabilitateCategory.class)
 	public void testPromovabilitateLowerBoundery() {
 		Grupa grupa=new Grupa(1083);
 		for( int i=0;i<3;i++) {
@@ -79,6 +87,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(TesteGetPromovabilitateCategory.class)
 	public void testPromovabilitateUpperBoundery() {
 		Grupa grupa=new Grupa(1083);
 		for( int i=0;i<3;i++) {
@@ -91,6 +100,7 @@ public class TestGrupa {
 	}
 	
 	@Test(expected=IndexOutOfBoundsException.class)
+	@Category(TesteGetPromovabilitateCategory.class)
 	public void testPromovabilitateErrorCondition() {
 		Grupa grupa=new Grupa(1083);
 		grupa.getPromovabilitate();
